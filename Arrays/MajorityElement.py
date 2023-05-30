@@ -21,3 +21,10 @@ class Solution:
             result[nums[i]]+=1
         return result.index(max(result))
     
+# Solution using dictionary
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        dict = defaultdict(int)
+        for i in nums:
+            dict[i]+=1
+        return max(dict, key=dict.get)
