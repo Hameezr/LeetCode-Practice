@@ -46,11 +46,15 @@ class Solution:
 
 # Explanation
 
-# We define a function combinationSum that takes the candidates array and the target integer as input and returns a list of all unique combinations that sum up to the target.
-# We start by sorting the candidates array in ascending order using the sort method. This is done to handle duplicate combinations later in the backtracking process.
-# We define a helper function backtrack that performs the actual backtracking process. It takes the candidates array, the target integer, the current combination of numbers, the result list to store the valid combinations, and the start index to keep track of the candidates that have been considered.
-# In the backtrack function, we check if the current target is less than 0. If so, it means we have exceeded the target and we return from the current recursion.
-# If the target is 0, it means we have found a valid combination that sums up to the target. We append this combination to the result list.
-# We iterate over the candidates array starting from the start index. For each candidate, we check if it is larger than the remaining target. If so, we break the loop because the remaining candidates will also be larger.
-# If the candidate is valid, we recursively call the backtrack function with the updated target (subtracting the candidate), the updated combination (adding the candidate), the result list, and the current index i. This allows us to include the same candidate multiple times in the combination.
-# Finally, we define an example usage by initializing the candidates array and the target, and call the combinationSum function. The result is printed to the console.
+# define a function called combinationSum that takes the candidates array and the target integer as input and returns a list of all unique combinations that sum up to the target. To ensure proper handling of duplicate combinations later in the backtracking process, I start by sorting the candidates array in ascending order using the sort method.
+# I also define a helper function called backtrack. This function performs the actual backtracking process. It takes the candidates array, the target integer, the current combination of numbers, the result list to store the valid combinations, and the start index to keep track of the candidates that have been considered.
+# In the backtrack function, I check if the current target is less than 0. If it is, it means we have exceeded the target and I return from the current recursion.
+# If the target is 0, it means we have found a valid combination that sums up to the target. I append this combination to the result list.
+# Next, I iterate over the candidates array starting from the start index. For each candidate, I check if it is larger than the remaining target. If it is, I break the loop because the remaining candidates will also be larger and won't contribute to a valid combination.
+# If the candidate is valid, I recursively call the backtrack function with the updated target (subtracting the candidate), the updated combination (adding the candidate), the result list, and the current index i. This allows us to include the same candidate multiple times in the combination, which is allowed in this problem.
+# Finally, I define an example usage by initializing the candidates array and the target, and I call the combinationSum function. The result is printed to the console.
+
+
+
+
+
