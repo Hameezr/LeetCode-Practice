@@ -34,3 +34,12 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         return any(i > 1 for i in Counter(nums).values())
 
+# Solution using List 
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = []
+        for i in nums:
+            if (i in seen):
+                return True
+            seen.append(i)
+        return False
