@@ -14,3 +14,8 @@ class Solution:
                 return True
             hashmap[nums[i]] = i
 
+# Solution using set
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(set(nums)) != len(nums)
+    
