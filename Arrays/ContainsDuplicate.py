@@ -28,3 +28,9 @@ class Solution:
                 return True
         return False
     
+# Solution using Counter
+from collections import Counter
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return any(i > 1 for i in Counter(nums).values())
+
